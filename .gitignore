@@ -1,0 +1,31 @@
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# IDE Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+
+# Word documents (optional - remove if you want to track them)
+*.docx
+
+# Node modules (if you add npm packages later)
+node_modules/
+
+# Build outputs (if you add a build process)
+dist/
+build/
