@@ -6,6 +6,8 @@
 let currentFilteredTemplates = [];
 let currentSelectedSubject = "";
 let currentHashtagString = "";
+let currentShuffledTemplates = []; // Store the current shuffled order
+let currentFilterKey = ""; // Track filter combination to detect changes
 
 // Fisher-Yates shuffle algorithm for randomizing array
 function shuffleArray(array) {
@@ -200,13 +202,25 @@ function applyFilters() {
   currentSelectedSubject = selectedSubject;
   currentHashtagString = fullHashtagString;
 
-  // Shuffle the filtered templates for random order
-  const shuffledTemplates = shuffleArray(filteredTemplates);
+  // Create filter key to track filter changes
+  const filterKey = `${selectedSubject}-${selectedType}-${searchTerm}-${tag1_Topic}-${tag3_General}`;
+
+  // Don't shuffle on filter changes - only shuffle when copy happens
+  let templatesToRender;
+  if (currentFilterKey !== filterKey) {
+    // Filter changed - use filtered templates in original order (NO shuffle)
+    templatesToRender = filteredTemplates;
+    currentShuffledTemplates = filteredTemplates;
+    currentFilterKey = filterKey;
+  } else {
+    // Same filter - keep existing order (preserves shuffled order if copy happened)
+    templatesToRender = currentShuffledTemplates.length > 0 ? currentShuffledTemplates : filteredTemplates;
+  }
 
   // Update active tab to match selected type
   updateActiveTab(selectedType);
 
-  renderHooks(shuffledTemplates, selectedSubject, fullHashtagString);
+  renderHooks(templatesToRender, selectedSubject, fullHashtagString);
 }
 
 function updateActiveTab(selectedType) {
@@ -289,9 +303,10 @@ function renderHooks(filteredHooks, selectedSubject, hashtags) {
 }
 
 function reRandomizeCurrentCategory() {
-  // Re-shuffle the current filtered templates
+  // Re-shuffle the current filtered templates (only called after copy)
   if (currentFilteredTemplates.length > 0) {
     const shuffledTemplates = shuffleArray(currentFilteredTemplates);
+    currentShuffledTemplates = shuffledTemplates; // Update stored shuffled order
     renderHooks(shuffledTemplates, currentSelectedSubject, currentHashtagString);
   }
 }
