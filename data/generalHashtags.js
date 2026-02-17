@@ -1,5 +1,5 @@
 const generalHashtags = [
-  "#TripuraTET",
+  "#TRIPURATET",
   "#stgt2025",
   "#TestPreps",
   "#TestPrepsQuiz",
