@@ -187,7 +187,7 @@ const hashtagData = {
     "#ভাষা_বিকাশ_কুইজ",
     "#লিঙ্গ_বৈষম্য_কুইজ",
     "#ব্যক্তিগত_বৈষম্য_কুইজ",
-    "#মূল্যায়ন_ও_সিসিই_কুইজ",
+    "#মূল্যায়ন_ও_CCE_কুইজ",
     "#অন্তর্ভুক্তিমূলক_শিক্ষা_কুইজ",
     "#বিশেষ_চাহিদাপন্ন_শিশু_কুইজ",
     "#শিখন_ও_শিক্ষণ_পদ্ধতি_কুইজ",
@@ -195,6 +195,24 @@ const hashtagData = {
     "#প্রজ্ঞা_ও_প্রক্ষোভ_কুইজ",
     "#প্রেষণা_ও_শিখন_তত্ত্ব_কুইজ",
     "#ব্যক্তিত্ব_ও_সংগতিবিধান_কুইজ"
+  ]
+
+  },
+  "English Grammar": {
+    primaryTag: "#TestPrepsEnglishGrammarQuiz",
+  
+  "topics": [
+    "#Concord_Quiz",
+    "#Question_Tags_Quiz",
+    "#Prepositions_Quiz",
+    "#Tense_And_Time_Quiz",
+    "#Determiners_Quiz",
+    "#Phrasal_Verbs_Quiz",
+    "#Gerunds_Quiz",
+    "#Error_Identification_Quiz",
+    "#Modals_Quiz",
+    "#Degree_Of_Comparison_Quiz",
+    "#Transformation_Of_Sentences_Quiz"
   ]
 
   },
