@@ -199,7 +199,7 @@ const hashtagData = {
 
   },
   "English Grammar": {
-    primaryTag: "#TestPrepsEnglishGrammarQuiz",
+    primaryTag: "#PrepsEnglishGrammarQuiz",
   
   "topics": [
     "#Concord_Quiz",
@@ -217,7 +217,7 @@ const hashtagData = {
 
   },
    "বাংলা ব্যাকরণ": {
-    primaryTag: "#BanglaGrammarQuiz",
+    primaryTag: "#BengaliGrammarQuiz",
     "topics": [
     "#বর্ণ_অক্ষর_শব্দ_কুইজ",
     "#উপসর্গ_অনুসর্গ_কুইজ",
@@ -235,7 +235,7 @@ const hashtagData = {
   ]
   },
     "বাংলা সাহিত্য": {
-    primaryTag: "#BanglaLiteratureQuiz",
+    primaryTag: "#BengaliLiteratureQuiz",
     "topics": [
     "#ঈশ্বরচন্দ্র_বিদ্যাসাগর_কুইজ",
     "#মধুসূদন_দত্ত_কুইজ",
