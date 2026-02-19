@@ -199,7 +199,7 @@ const hashtagData = {
 
   },
   "English Grammar": {
-    primaryTag: "#PrepsEnglishGrammarQuiz",
+    primaryTag: "#EnglishGrammarQuiz",
   
   "topics": [
     "#Concord_Quiz",
